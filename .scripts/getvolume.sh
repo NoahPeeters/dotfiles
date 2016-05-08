@@ -3,8 +3,10 @@ raw=$(pactl list | grep "	Sink: " | sed "s/[^0-9]//g;s/^$/-1/;")
 sinks=($raw)
 output=""
 x=0
-for key in "${!sinks[@]}"
+#echo ${!sinks[@]}
+for key in "0"  #"${!sinks[@]}"
 do
+        #echo "$key"
 	sink="${sinks[$key]}"
 	vol=$($HOME/.scripts/getvolume.pl $sink)
 	if [ "${#sinks[@]}" -gt "1" ] && [ "$key" -gt "0" ]; then
