@@ -7,6 +7,8 @@ ZSH=/usr/share/oh-my-zsh/
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bullet-train"
 
+BULLETTRAIN_EXEC_TIME_SHOW=true
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 

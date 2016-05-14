@@ -1,18 +1,18 @@
 ! urxvt
-#urxvt*font:             xft:Terminus:size=10
-#urxvt*font:             xft:Bitstream Vera Sans Mono:size=10
-#urxvt*font:		xft:Fira Mono for Powerline:size=10
+!urxvt*font:             xft:Terminus:size=10
+!urxvt*font:             xft:Bitstream Vera Sans Mono:size=10
+!urxvt*font:		xft:Fira Mono for Powerline:size=10
 urxvt*font:		xft:Hack-Regular:size=10
 urxvt*termName:         rxvt
-urxvt*background:       #000000
+!urxvt*background:       #000000
 urxvt*foreground:       #cccccc
 urxvt*scrollBar:        false
 urxvt*perl-lib:         /usr/lib/urxvt/perl/
 urxvt*perl-ext-common:  default,matcher
-urxvt*urlLauncher:      /usr/bin/jumanji
+urxvt*url-launcher:      /usr/bin/google-chrome-stable
 urxvt*matcher.button:   1
-#urxvt*fading:           50
-#urxvt*fadeColor:        #000000
+!urxvt*fading:           50
+!urxvt*fadeColor:        #000000
 
 Xft*dpi:                96
 Xft*antialias:          true
@@ -43,15 +43,30 @@ URxvt*color15:     #ffffff
 
 ! rofi
 rofi.modi: run
-rofi.font: Hack 15
-rofi.width: 100
-rofi.lines: 5
+rofi.font: Neutraliser 15
+rofi.width: 70
+rofi.lines: 6
 rofi.columns: 1
-rofi.opacity: 80
-rofi.fg: #505050
-rofi.bg: #000000
-rofi.hlfg: #ffb964
-rofi.hlbg: #000000
-rofi.bw: 0
+!rofi.opacity: 80
+!rofi.fg: #505050
+!rofi.bg: #000000
+!rofi.hlfg: #ffb964
+!rofi.hlbg: #000000
+!rofi.bw: 5
 rofi.location: 2
-rofi.padding: 100
+rofi.padding: 20
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+! Use extended color scheme
+rofi.color-enabled:                  true
+! Color scheme for normal row
+rofi.color-normal:                   argb:00000000,  #D8DEE9 , argb:00000000,  #FAC863 ,  #1B2B34
+! Color scheme for urgent row
+rofi.color-urgent:                   argb:00000000,  #F99157 , argb:00000000,  #F99157 ,  #1B2B34
+! Color scheme for active row
+rofi.color-active:                   argb:00000000,  #6699CC , argb:00000000,  #6699CC ,  #1B2B34
+! Color scheme window
+rofi.color-window:                   argb:ee222222,  #FAC863 ,  #FAC863
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid

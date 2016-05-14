@@ -15,5 +15,11 @@ do
 	fi
 	output="$output  $vol"
 done
-if [ "$BLOCK_BUTTON" != "" ]; then pavucontrol; fi
+if [ "$BLOCK_BUTTON" != "" ]; then
+  pavucontrol &
+#  gksudo wpa_gui &
+#  whoami > /tmp/iam 
+fi
+
+#if [ "$BLOCK_BUTTON" != "" ]; then (gksu wpa_gui &); fi
 echo $output
