@@ -1,0 +1,6 @@
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+<Multi_key> <minus> <greater> : "→" U2192 # Compose - >
+<Multi_key> <colon> <parenright> : "☺" U263A   # Compose : )
+<Multi_key> <h> <n> <k> : "hugs and kisses" # Compose h n k
+<Multi_key> <less> < p> : "< p></p>" # Compose < p
