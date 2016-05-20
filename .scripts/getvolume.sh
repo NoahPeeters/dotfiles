@@ -15,11 +15,16 @@ do
 	fi
 	output="$output  $vol"
 done
-if [ "$BLOCK_BUTTON" != "" ]; then
+
+
+if [ "$BLOCK_BUTTON" == "1" ]; then
   pavucontrol &
-#  gksudo wpa_gui &
-#  whoami > /tmp/iam 
+elif [ "$BLOCK_BUTTON" == "4" ]; then
+  /etc/acpi/handlers/volume +
+elif [ "$BLOCK_BUTTON" == "5" ]; then
+  /etc/acpi/handlers/volume -
 fi
+
 
 #if [ "$BLOCK_BUTTON" != "" ]; then (gksu wpa_gui &); fi
 echo $output
