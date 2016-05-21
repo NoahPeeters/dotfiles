@@ -2,6 +2,13 @@
 
 MAN_SPEED=$(cat /sys/devices/platform/applesmc.768/fan1_output)
 
+
+if [ "$BLOCK_BUTTON" -ne 0 ]; then
+  if [ ! -w /sys/devices/platform/applesmc.768/fan1_manual ]; then
+    gksu $HOME/.scripts/fan_permission.sh
+  fi
+fi
+
 if [ "$BLOCK_BUTTON" == "1" ]; then
   if [ $(cat /sys/devices/platform/applesmc.768/fan1_manual) -eq 0 ]; then
     echo "1" > /sys/devices/platform/applesmc.768/fan1_manual
