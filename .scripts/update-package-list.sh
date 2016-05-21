@@ -1,1 +1,1 @@
-pacman -Qe | awk '{print $1}' > /home/themegatb/dotfiles/packages.list
+pacman -Qe | awk '{print $1}' > $HOME/.files/packages.list

@@ -8,7 +8,7 @@ for key in "0"  #"${!sinks[@]}"
 do
         #echo "$key"
 	sink="${sinks[$key]}"
-	vol=$($HOME/.scripts/getvolume.pl $sink)
+	vol=$($HOME/.scripts/getvolume.pl $sink | tail -n 1)
 	if [ "${#sinks[@]}" -gt "1" ] && [ "$key" -gt "0" ]; then
 		output="$output  "
 		#output="$output$sink: "
