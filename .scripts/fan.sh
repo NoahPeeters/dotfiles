@@ -20,7 +20,7 @@ fi
 
 
 
-TEMP=$(sensors | grep Physical | sed s/"Physical id 0:"// | sed s/"°C  (high = +87.0°C, crit = +105.0°C)"// | tr -d ' ' | tr -d '+' | tr -d '.0')
+TEMP=$(sensors | grep Physical | sed s/"Physical id 0:"// | sed s/"°C  (high = +87.0°C, crit = +105.0°C)"// | tr -d ' ' | tr -d '+')
 
 if [ $(cat /sys/devices/platform/applesmc.768/fan1_manual) -eq 0 ]; then
   echo "$TEMP-$(cat /sys/devices/platform/applesmc.768/fan1_input)"
