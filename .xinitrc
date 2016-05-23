@@ -36,8 +36,9 @@ sh ~/.fehbg &
 xbindkeys
 unclutter &
 redshift &
-#pulseaudio -D &
-(pulseaudio --start && shairport-sync)&
+avahi-browse _dacp._tcp -rplfk | avahi-browse_parser &
+LATENCY=30000
+(pulseaudio --start && shairport-sync --latency=$LATENCY -i=$LATENCY -A=$LATENCY -vv 2>&1 | shairport_parser)&
 devmon --no-gui &
 numlockx &
 
