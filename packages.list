@@ -28,6 +28,7 @@ diffutils
 e2fsprogs
 efibootmgr
 eog
+ettercap-gtk
 eudev
 eudev-systemdcompat
 exfat-utils
@@ -142,6 +143,7 @@ tar
 teiler-git
 texinfo
 thefuck
+thunderbird
 tree
 ttf-font-awesome
 ttf-hack-powerline-git
@@ -157,6 +159,8 @@ vi
 vlc
 wget
 which
+wireshark-cli
+wireshark-gtk
 wpa_supplicant
 wpa_supplicant_gui
 xautomation
